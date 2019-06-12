@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+  
+</head>
+<style>
+          .page{
+              /* height: 29.7cm; */
+              width: 21cm; 
+               /* border: 1px solid black; */
+              background: url(img/bg.png);
+              background-size: 50%;
+              background-position: 50%;
+              background-repeat: no-repeat;
+              position: relative;
+                      }
+
+           
+           .logo-default {
+                width: 175px;
+                padding-left: 20px;
+                padding-top: 40px;
+            }
+           
+           .background-logo{
+            width:75px;
+               height:75px;
+               background-size: cover;
+           }
+           #rectangle{
+            width: 794px;
+            height: 30px;
+            background: #5bccf5;
+            /* margin-top: 903px; */
+          }
+                  .earth{
+                    display: inline-block;
+                    /* padding-left: 150px;
+                    padding-top: 440px; */
+                    width: 15px;
+                    height: 15px;
+                  
+                  
+                          }
+                  .mail{
+                    display: inline-block;
+                    /* padding-left: 150px;
+                    padding-top: 480px; */
+                    width: 15px;
+                    height: 15px;
+                  
+            
+                  }
+                  .phone{
+                    display: inline-block;
+                    /* padding-left: 462px;
+                    padding-top: 479px; */
+                    width: 15px;
+                    height: 15px;
+            
+           
+                  }
+                  .location{
+                    display: inline-block;
+                    /* padding-left: 462px;
+                    padding-top: 439px; */
+                    width: 15px;
+                    height: 15px;
+                  }
+
+            .earth-size{
+             
+              background-color: #23235f;
+              width: 30px;
+              height: 30px;
+              padding: 5px;
+              
+            }
+            .mail-size{
+              background-color: #23235f;
+              width: 30px;
+              height: 30px;
+              padding: 5px;
+               
+            }
+            .phone-size{
+              background-color: #23235f;
+              width: 30px;
+              height: 30px;
+              padding: 5px;
+            }
+            .location-size{
+              
+              background-color: #23235f;
+              width: 30px;
+              height: 30px;
+              padding: 5px;
+            }
+            .earth-paragraph{
+              font-weight: 600;  
+              color: #23235f;
+              font-size: x-large;
+              /* margin-top: -43px;
+              padding-left: 56px; */
+                      }
+             .phone-paragraph{
+              color: #23235f;
+              font-size: x-large;
+              font-weight: 600; 
+              /* margin-top: -39px;
+              padding-left: 56px; */
+             } 
+             .location-paragraph{
+              color: #23235f;
+              font-size: x-large;
+              font-weight: 600;
+              /* margin-top: -43px;
+              padding-left: 56px;  */
+             } 
+             .mail-paragraph{
+              color: #23235f;
+              font-size: x-large;
+              font-weight: 600;
+              /* margin-top: -39px;
+              padding-left: 56px; */
+             }
+             .row1{
+              width: 70%;
+              padding-left: 46px;
+              /* margin: 0 auto; */
+              /* display: inline-block; */
+              clear: both;
+              height: 39px;
+
+             }
+             .half{
+               float: left;
+               width: 50%;
+             }
+             .icon{
+               padding: 10px;
+               margin-right: 5px;
+              background: #003350;
+              float: left;
+              width: 13%;
+             }
+             .icon img{
+               max-width: 100%;
+             }
+             .paragraph{
+              width: 80%;
+              color: #003350;
+              /* font-size: x-large; */
+              font-weight: 600;
+             }
+             .footer{
+              width: 100%;
+              margin: 0 auto;
+              /* display: block; */
+              clear: both;
+              position: relative;
+              bottom: 0;
+              top: 101px;
+              text-align: center;
+             }       
+            .content{
+              padding-left: 15px;
+              margin-left: 105px;
+              /* height: 20cm; */
+              width: 15cm;
+              /* border: 1px solid black; */
+              float: none;
+            }
+            .content table td, .content table th{
+                text-align: center;
+            }
+            .tittle{
+              font-size: x-large;
+              font-weight: 500;
+             
+              padding: 5px;
+              float: right;
+              margin-top: 42px;
+           }
+           .name{
+            font-size: larger;
+             font-weight: 400;
+             margin-top: 42px;
+           }
+           .mob{
+            font-size: larger;
+             font-weight: 400;
+           }
+           table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+              margin-top: 45px;
+            }
+
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+
+            tr:nth-child(even) {
+              /* background-color: #dddddd; */
+            }
+            td .circular, th .circular{
+                text-align: center;
+                margin: 0 auto;
+            }
+            .photo{
+              padding: 10px;
+              text-align: center;
+   
+            }
+            .image{
+              max-width: 100%;
+              max-height: 100%;
+            }
+            .col-md-2 {
+              -ms-flex: 0 0 16.666667%;
+              flex: 0 0 16.666667%;
+              max-width: 16.666667%;
+              position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+                   }
+                   .col-md-4 {
+                      -ms-flex: 0 0 33.333333%;
+                      flex: 0 0 33.333333%;
+                      max-width: 33.333333%;
+                      position: relative;
+                      width: 100%;
+                      padding-right: 15px;
+                      padding-left: 15px;
+                    }
+            .col-md-6 {
+              -ms-flex: 0 0 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+              position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            }
+            .col-md-8 {
+                -ms-flex: 0 0 66.666667%;
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+                position: relative;
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+
+              }
+            .col-md-12 {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+                position: relative;
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+
+              }
+              .col-lg-2 {
+                -ms-flex: 0 0 16.666667%;
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+                position: relative;
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+              }
+              .col-sm-2 {
+                -ms-flex: 0 0 16.666667%;
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+                position: relative;
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+
+              }
+             .table{
+               border: 1px solid grey;
+               text-align: center;
+               padding: 10px 43px;
+
+             }
+             .noborder{
+              border-right: 0px;
+             }
+</style>
+
+<body>
+    <body>
+        <!-- <p id="ignorePDF">don't print this to pdf</p> -->
+        <div>
+          <!-- <p class="test-style">print this to pdpppppppppppppppf</p> -->
+            <p class="test-style">print this to pdpppppppppppppppf</p>
+            <p class="test1-style">print this to pdpppppppppppppppf</p>
+            <p class="test2-style">print this to pdpppppppppppppppf</p>
+            <p class="test3-style">print this to pdpppppppppppppppf</p>
+            <p class="test3-style">print this to pdpppppppppppppppf</p>
+            <!-- <img id="image" src="https://www.google.de/images/srpr/logo11w.png"> -->
+
+            
+          <div>
+                <table>
+                        <tr>
+                            <td>xxxxxxxx</td>
+                            <td>Name</td>
+
+                            <td>xxxxxxxxx</td>
+                            <td>Name 2</td>
+
+                        </tr>
+                        <tr>
+                            <td>2/2/2019</td>
+                            <td>Starting Date</td>
+
+                            <td>On-going or Date</td>
+                            <td>Ending Date</td>
+
+                        </tr>
+                        <tr>
+                            <td>Frequency</td>
+                            <td></td>
+                            <td>Dose</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Prescriber name</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                        </table>  
+          </div>
+
+
+        </div>
+      
+    <script type="text/javascript">
+            $(function(){
+                alert("jhjfdj")
+                var doc = new jsPDF();   
+                
+                         var elementHandler = {
+                        '#ignorePDF': function (element, renderer) {
+                            return true;
+                        }
+                        };
+                        var source = window.document.getElementsByTagName("body")[0];
+                        doc.fromHTML(
+                            source,
+                            15,
+                            15,
+                            {
+                            'width': 280
+                            });
+
+                        doc.output("dataurlnewwindow");
+            })
+    </script>
+</body>
+</html>
