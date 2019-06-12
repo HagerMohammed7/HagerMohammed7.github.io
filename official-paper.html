@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-
-  
-</head>
-<style>
-          .page{
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <title>MEDawi</title>
+        <link href="css/circle.css" rel="stylesheet" type="text/css" />
+        <style>
+            .page{
               /* height: 29.7cm; */
               width: 21cm; 
                /* border: 1px solid black; */
@@ -303,79 +297,209 @@
              .noborder{
               border-right: 0px;
              }
-</style>
 
-<body>
-    <body>
-        <!-- <p id="ignorePDF">don't print this to pdf</p> -->
-        <div>
-          <!-- <p class="test-style">print this to pdpppppppppppppppf</p> -->
-            <p class="test-style">print this to pdpppppppppppppppf</p>
-            <p class="test1-style">print this to pdpppppppppppppppf</p>
-            <p class="test2-style">print this to pdpppppppppppppppf</p>
-            <p class="test3-style">print this to pdpppppppppppppppf</p>
-            <p class="test3-style">print this to pdpppppppppppppppf</p>
-            <!-- <img id="image" src="https://www.google.de/images/srpr/logo11w.png"> -->
+          @media print {
+           .icon{
+                  background-color: #1a4567 !important;
+                  -webkit-print-color-adjust: exact; 
+              }
+}
 
+        </style>
+
+    </head>
+
+  <body >
+      <!--START OF PAGE-->
+        <div class="page">
+          <div class="row">
+             <div class="col-md-2">
             
-          <div>
-                <table>
-                        <tr>
+             
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                  <a href="index.html">
+                      <img src="img/medawi logo.png" alt="logo"  class="logo-default"/>
+                  </a>
+                </div>
+              </div>   
+              <!--END LOGO-->
+              <div class="col-md-6">
+                <p class="tittle">Medication History Jan-Feb 2019 </p>
+              </div> 
+              <div class="col-md-4">
+                    <p class="name">First and 2nd name </p>
+                    <p class="mob">+9662372387</p>
+              </div>
+
+          </div>
+
+            <div class="content">
+               
+                 <!--start of first table-->
+                 <div class="row">
+                    <!--start of circular part-->
+                    
+                      <div class="col-md-4 col-sm-4 col-xs-12 table noborder">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="circular">
+                                  <div class="c100 p20 small">
+                                      <span>20%</span>
+                                      <div class="slice">
+                                          <div class="bar"></div>
+                                          <div class="fill"></div>
+                                      </div>
+                                  </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12"> 
+                              <p>Jan</p>     
+                            </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12  table  noborder">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="circular">
+                              <div class="c100 p30 small">
+                                  <span>30%</span>
+                                  <div class="slice">
+                                      <div class="bar"></div>
+                                      <div class="fill"></div>
+                                  </div>
+                              </div>
+                           </div>
+                         </div>
+                         <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p>Feb</p>
+                         </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12  table">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="circular">
+                                  <div class="c100 p24 small">
+                                  <span>24%</span>
+                                      <div class="slice">
+                                          <div class="bar"></div>
+                                          <div class="fill"></div>
+                                      </div>
+                                  </div>
+
+                              </div>
+                            </div> 
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <p>March</p>
+                          </div>
+
+                      </div>
+                    
+                    <!--end of circular part-->
+
+                  
+                 </div>
+                 <!-- end of first table-->
+
+
+
+                 <!--photoes of 2nd table-->
+                   <div class="row">
+                     <div class="col-md-6">
+                        <div  class="photo" ><img src="img/download.jpg"  class="image" /> </div>
+                     </div>
+                    
+                     <div class="col-md-6">
+                        <div  class="photo" > <img  src="img/download (1).jpg" class="image" /> </div>
+                     </div>
+
+                   </div>
+                 <!--end of photoes-->
+
+                 <!--start of 2nd table-->
+                 <div class="row">
+                   <div class="col-md-12">
+                      <table>
+                          <tr>
                             <td>xxxxxxxx</td>
-                            <td>Name</td>
+                            <td>اسم الدواء</td>
 
                             <td>xxxxxxxxx</td>
-                            <td>Name 2</td>
+                            <td>اسم المادة الفعالة</td>
 
-                        </tr>
-                        <tr>
+                          </tr>
+                          <tr>
                             <td>2/2/2019</td>
-                            <td>Starting Date</td>
+                            <td>تاريخ البدء</td>
 
                             <td>On-going or Date</td>
-                            <td>Ending Date</td>
+                            <td>تاريخ الانتهاء</td>
 
-                        </tr>
-                        <tr>
+                          </tr>
+                          <tr>
                             <td>Frequency</td>
                             <td></td>
                             <td>Dose</td>
                             <td></td>
-                        </tr>
-                        <tr>
+                          </tr>
+                          <tr>
                             <td>Prescriber name</td>
                             <td></td>
                             <td></td>
                             <td></td>
-                        </tr>
+                          </tr>
                         
                         </table>  
-          </div>
+                 </div>
+                </div>
+                 <!--end of 2nd table-->
+            </div>
+
+          <!--START OF FOOTER-->
+                <div class="footer">
+                    <div class="">
+                        <div class="row1">   
+                             <div class="half">    
+                                <div  class="icon" ><img src="img/earth.png"  /> </div>
+                                <p class="paragraph">www.medawiapp.com</p>
+                          
+                              </div>
+                        
+                               <div class="half"> 
+                                 <div  class="icon" ><img src="img/placeholder.png"  /> </div>  
+                                 <p class="paragraph"> جدة المملكة العربية السعودية</p>  
+                                  
+                                </div> 
+
+                          </div>  
+                       
+                         <!--END OF ROW1-->
+              
+                    <div class="row1">
+                      <div class="half">    
+                          <div  class="icon" ><img src="img/close-envelope.png"  /> </div> 
+                          <p class="paragraph"> pharmalani@gmail.com</p>
+                      </div>  
+                    
+                      <div class="half">    
+                          <div  class="icon" ><img src="img/phone-receiver.png"  /> </div>
+                        <p class="paragraph"> +966506688697</p> 
+                      </div> 
+                  
+                  
+                    </div>
+            
+                <!--END OF ROW2-->
+                 
+                   <div id="rectangle"> </div>
+                 
+             
+                 </div>
+              <!--end of container-->
+              </div>   
+            
+            
+          <!--END OF FOOTER-->
+
+         </div>
+       <!--END OF PAGE-->
+  </body>
 
 
-        </div>
-      
-    <script type="text/javascript">
-            $(function(){
-                alert("jhjfdj")
-                var doc = new jsPDF();   
-                
-                         var elementHandler = {
-                        '#ignorePDF': function (element, renderer) {
-                            return true;
-                        }
-                        };
-                        var source = window.document.getElementsByTagName("body")[0];
-                        doc.fromHTML(
-                            source,
-                            15,
-                            15,
-                            {
-                            'width': 280
-                            });
-
-                        doc.output("dataurlnewwindow");
-            })
-    </script>
-</body>
 </html>
